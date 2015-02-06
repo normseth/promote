@@ -1,0 +1,176 @@
+{
+  "id": "QA3",
+  "networks": {
+    "default": {
+      "label": "vlan_388_172.22.188",
+      "subnet": "172.22.188",
+      "primary_dns": "172.17.1.26",
+      "secondary_dns": "172.17.1.27"
+    },
+    "build": {
+      "label": "vlan_574_build",
+      "subnet": "172.17.2",
+      "primary_dns": "172.17.1.26",
+      "secondary_dns": "172.17.1.27"
+    },
+    "management": {
+      "label": "vlan_510_172.22.10",
+      "subnet": "172.22.10",
+      "primary_dns": "192.168.64.19",
+      "secondary_dns": "192.168.64.20"
+    },
+    "dlab_test": {
+      "label": "vlan_2103_dlab_test",
+      "subnet": "172.22.10",
+      "primary_dns": "172.17.1.26",
+      "secondary_dns": "172.17.1.27"
+    }
+  },
+  "hypervisors": {
+    "standard": [
+      {
+        "datacenter": "QA3",
+        "vsphere_server": "172.22.10.10",
+        "vsphere_username": "qa3vc01\\vmapi",
+        "vsphere_password": "Pass@word1",
+        "clusters": [
+          "QA3"
+        ],
+        "datastores": [
+          {
+            "name": "QA3-PREMIUM01",
+            "type": "cluster",
+            "group": "premium"
+          },
+          {
+            "name": "QA3-Storage01",
+            "type": "cluster",
+            "group": "standard"
+          },
+          {
+            "name": "4110-vm1",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "4110-vm2",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "QA3-SFIRE-01",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA3-SFIRE-02",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA3-SFIRE-03",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA3-SFIRE-04",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA3-SFIRE-05",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA3-VMTEMPLATES-A01",
+            "type": "template"
+          }
+        ]
+      }
+    ],
+    "hyperscale": [
+      {
+        "datacenter": "QA3HPC",
+        "vsphere_server": "172.22.10.11",
+        "vsphere_username": "qa4t3nvc01\\vmapi",
+        "vsphere_password": "Pass@word1",
+        "vsphere_expected_pubkey_hash": "2835e643a1fcc483221cd51c2b5aa8aa47cec074501baaa04a856b5da0a16498",
+        "clusters": [
+          "QA3HPCCL01"
+        ],
+        "hosts": [
+          {
+            "name": "qa4t3nesx01.t3n.dom"
+          },
+          {
+            "name": "qa4t3nesx02.t3n.dom"
+          },
+          {
+            "name": "qa4t3nesx03.t3n.dom"
+          }
+        ],
+        "datastores": [
+          {
+            "name": "QA3HPC01",
+            "group": "premium"
+          },
+          {
+            "name": "QA3HPC02",
+            "group": "premium"
+          },
+          {
+            "name": "QA3HPC03",
+            "group": "premium"
+          },
+          {
+            "name": "QA3HPC04",
+            "group": "premium"
+          },
+          {
+            "name": "TEMPLATE-REPL",
+            "type": "clone"
+          },
+          {
+            "name": "QA3-VMTEMPLATES-HPC-A01",
+            "type": "template"
+          }
+        ]
+      },
+      {
+        "datacenter": "QA4HPC",
+        "vsphere_server": "172.22.10.30",
+        "vsphere_username": "vmapi",
+        "vsphere_password": "Pass@word1",
+        "vsphere_expected_pubkey_hash": "a1fbaf3d6f7543117abc545f6591a34087d6cfa0f8dd78b8ffb37142449bcf14",
+        "clusters": [
+          "QA4HPCCL02"
+        ],
+        "datastores": [
+          {
+            "name": "QA3HPC04",
+            "group": "premium"
+          },
+          {
+            "name": "QA4-SFIRE-VM01",
+            "group": "premium"
+          },
+          {
+            "name": "QA4-SFIRE-VM02",
+            "group": "premium"
+          },
+          {
+            "name": "TEMPLATE-REPL",
+            "type": "clone"
+          },
+          {
+            "name": "QA3-VMTEMPLATES-HPC-A02",
+            "type": "template"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "1.0.6",
+  "sha1": "4d9d7a1bbc9e3c0f98b651cbb44cc61c0a1a16fe"
+}

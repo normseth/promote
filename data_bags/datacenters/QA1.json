@@ -1,0 +1,127 @@
+{
+  "datacenter": "QA1",
+  "id": "QA1",
+  "networks": {
+    "default": {
+      "label": "vlan_20_172.21.20",
+      "subnet": "172.21.20",
+      "primary_dns": "172.21.20.31",
+      "secondary_dns": "172.21.20.41"
+    },
+    "build": {
+      "label": "vlan_74_build",
+      "subnet": "172.17.2",
+      "primary_dns": "172.17.1.26",
+      "secondary_dns": "172.17.1.27"
+    },
+    "management": {
+      "label": "vlan10_172.21.10-vm",
+      "subnet": "172.21.10",
+      "primary_dns": "192.168.64.19",
+      "secondary_dns": "192.168.64.20"
+    }
+  },
+  "hypervisors": {
+    "standard": [
+      {
+        "datacenter": "QA1",
+        "vsphere_server": "172.21.10.10",
+        "vsphere_username": "This has been moved to the environment secrets vault",
+        "vsphere_password": "This has been moved to the environment secrets vault",
+        "vsphere_expected_pubkey_hash": "2428be1b8099744b958c7b81e0d87e029c67bc1636f39fac069eb7d8ce29835a",
+        "clusters": [
+          "CLSTR02"
+        ],
+        "datastores": [
+          {
+            "name": "QA1-Premium",
+            "type": "cluster",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-standard",
+            "type": "cluster",
+            "group": "standard"
+          },
+          {
+            "name": "4110-vm1",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "4110-vm2",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "QAEQL01-A",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "QAEQL01-B",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "QAEQL01-C",
+            "type": "datastore",
+            "group": "standard"
+          },
+          {
+            "name": "QA1-2-SFIRE-01",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-02",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-03",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-04",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-05",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-06",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-07",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-08",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-09",
+            "type": "datastore",
+            "group": "premium"
+          },
+          {
+            "name": "QA1-2-SFIRE-10",
+            "type": "datastore",
+            "group": "premium"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "1.0.8",
+  "sha1": "046fade1cb723a3cece0fa20b6fa33b1eaa8ea88"
+}

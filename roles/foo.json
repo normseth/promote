@@ -1,0 +1,9 @@
+{
+  "name": "foo",
+  "decription": "The role of foo",
+  "default_attributes": {
+    "chef_client": {
+      "interval": 600
+    }
+  }
+}

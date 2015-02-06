@@ -1,0 +1,49 @@
+{
+  "name": "dnssearch_testing",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+    "clc_library": {
+      "win_fqdn": "dlab.local"
+    },
+    "platform_win": {
+      "win_domain_admin": "dlab\\administrator"
+    }
+  },
+  "override_attributes": {
+    "environment_parent": "LAB",
+    "datacenter": "QA1",
+    "platform_linux": {
+      "fix_resolvconf": true
+    },
+    "provisioner": {
+      "vault_bag": "secrets_qa",
+      "cluster_vaults": [
+        "QA1_secrets",
+        "some_secrets",
+        "more_secrets"
+      ],
+      "cluster": {
+        "dcpri": {
+          "ip_start": 31
+        },
+        "dcbac": {
+          "ip_start": 41
+        },
+        "dhcp": {
+          "ip_start": 13,
+          "recipe": {
+            "default": "dhcp"
+          }
+        }
+      }
+    },
+    "version": "1.1.273",
+    "sha1": "13c42272d6d7043700cbfd3697e17f64714b47be"
+  },
+  "cookbook_versions": {
+    "chef-client": "3.7.0",
+    "clc_library": "1.1.29",
+    "platform_linux": "1.0.7",
+  }
+}
