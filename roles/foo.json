@@ -3,7 +3,7 @@
   "decription": "The role of foo",
   "override_attributes": {
     "chef_client": {
-      "interval": 600
+      "interval": 601
     },
     "foo": "bar"
   }
