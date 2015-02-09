@@ -1,9 +1,10 @@
 {
   "name": "foo",
   "decription": "The role of foo",
-  "default_attributes": {
+  "override_attributes": {
     "chef_client": {
       "interval": 600
-    }
+    },
+    "foo": "bar"
   }
 }
