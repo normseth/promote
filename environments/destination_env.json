@@ -44,6 +44,6 @@
   "cookbook_versions": {
     "chef-client": "3.7.0",
     "clc_library": "1.1.29",
-    "platform_linux": "1.0.8"
+    "platform_linux": "1.0.9"
   }
 }
