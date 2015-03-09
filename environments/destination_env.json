@@ -13,6 +13,7 @@
   "override_attributes": {
     "environment_parent": "LAB",
     "datacenter": "QA1",
+    "stamp": "QA1",
     "platform_linux": {
       "fix_resolvconf": true
     },
